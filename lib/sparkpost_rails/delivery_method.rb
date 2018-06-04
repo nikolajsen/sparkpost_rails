@@ -377,7 +377,7 @@ module SparkPostRails
     end
 
     def post_to_api
-      url = "https://api.sparkpost.com/api/v1/transmissions"
+      url = "https://api.eu.sparkpost.com/api/v1/transmissions"
 
       uri = URI.parse(url)
       http = Net::HTTP.new(uri.host, uri.port)
