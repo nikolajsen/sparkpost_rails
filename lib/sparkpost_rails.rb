@@ -46,7 +46,11 @@ module SparkPostRails
         @api_key = ""
       end
 
-      @api_endpoint = "https://api.sparkpost.com/api/v1/"
+      if ENV.has_key?("SPARKPOST_API_URL")
+        @api_endpoint = ENV["SPARKPOST_API_URL"]
+      else
+        @api_endpoint = "https://api.sparkpost.com/api/v1/"
+      end
 
       @sandbox = false
 
