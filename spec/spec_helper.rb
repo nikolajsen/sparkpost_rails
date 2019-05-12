@@ -17,7 +17,7 @@ RSpec.configure do |config|
         c.api_key = "TESTKEY1234"
       end
     end
-    uri = URI.join(SparkPostRails.configuration.api_endpoint, 'v1/transmissions')
+    uri = URI.join(SparkPostRails.configuration.api_endpoint, 'transmissions')
     stub_request(:any, uri.to_s).
       to_return(body: "{\"results\":{\"total_rejected_recipients\":0,\"total_accepted_recipients\":1,\"id\":\"00000000000000000\"}}", status: 200)
   end

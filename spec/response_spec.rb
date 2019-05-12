@@ -15,7 +15,7 @@ describe SparkPostRails::DeliveryMethod do
     end
 
     it "raises exception on error" do
-      uri = URI.join(SparkPostRails.configuration.api_endpoint, 'v1/transmissions')
+      uri = URI.join(SparkPostRails.configuration.api_endpoint, 'transmissions')
       stub_request(:any, uri.to_s).
         to_return(body: "{\"errors\":[{\"message\":\"required field is missing\",\"description\":\"recipients or list_id required\",\"code\":\"1400\"}]}", status: 403)
 

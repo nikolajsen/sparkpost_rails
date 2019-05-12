@@ -46,7 +46,7 @@ module SparkPostRails
         @api_key = ""
       end
 
-      @api_endpoint = "https://api.sparkpost.com/api/"
+      @api_endpoint = "https://api.sparkpost.com/api/v1/"
 
       @sandbox = false
 
